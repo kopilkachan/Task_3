@@ -13,7 +13,7 @@ class TestAccount:
         password = create_user["user_data"]["password"]
         acc.login_test_user(email, password)
         home.click_account(URL.PERSONAL_ACCOUNT)
-        assert browser.current_url == URL.PERSONAL_ACCOUNT
+        assert home.get_current_url() == URL.PERSONAL_ACCOUNT
 
     @allure.title('Проверка перехода в раздел «История заказов»')
     def test_click_history_orders_open_page(self, browser, create_user):
@@ -24,7 +24,7 @@ class TestAccount:
         acc.login_test_user(email, password)
         home.click_account(URL.PERSONAL_ACCOUNT)
         acc.click_history_order()
-        assert browser.current_url == URL.ORDERS_HISTORY
+        assert home.get_current_url() == URL.ORDERS_HISTORY
 
     @allure.title('Проверка выхода из аккаунта')
     def test_click_exit_to_login_page(self, browser, create_user):
@@ -35,4 +35,4 @@ class TestAccount:
         acc.login_test_user(email, password)
         home.click_account(URL.PERSONAL_ACCOUNT)
         acc.click_exit(URL.LOGIN_PAGE)
-        assert browser.current_url == URL.LOGIN_PAGE
+        assert home.get_current_url() == URL.LOGIN_PAGE

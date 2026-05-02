@@ -4,6 +4,7 @@ from pages.home_page import HomePage
 from pages.account_page import AccountPage
 from data import URL
 
+
 class TestFeed:
 
     @allure.title('Проверка открытия всплывающего окна с деталями заказа')
@@ -12,6 +13,7 @@ class TestFeed:
         feed = FeedPage(browser)
         home.open_feed_orders()
         feed.click_order()
+
         assert feed.is_visible_ins() == True
 
     @allure.title('Проверка наличия заказов из "Истории заказов" в "Ленте заказов"')
@@ -30,6 +32,7 @@ class TestFeed:
         num1 = acc.set_last_order_num()
         feed.open_page(URL.ORDERS_FEED)
         nums_three = feed.get_first_three_orders()
+
         assert num1 in nums_three
 
     @allure.title('Проверка счетчика "Выполнено за всё время"')
@@ -87,5 +90,6 @@ class TestFeed:
         num1 = feed.refact_order_num(num1)
         feed.open_page(URL.ORDERS_FEED)
         num2 = feed.get_first_three_orders_in_work()
+        
         assert num1 in num2
     

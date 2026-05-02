@@ -32,5 +32,3 @@ class FeedPage(BasePage):
     @allure.step('Привести номер заказа к формату из блока "В работе"')
     def refact_order_num(self, num):
         return num.lstrip('#')
-
-    

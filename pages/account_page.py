@@ -5,7 +5,7 @@ import allure
 from data import URL
 
 
-class LoginPage(BasePage):
+class AccountPage(BasePage):
 
     @allure.step('Открыть страницу входа')
     def open_login_page(self):
@@ -42,9 +42,6 @@ class LoginPage(BasePage):
         self.write(AccountPageLocators.EMAIL, email)
         self.click(AccountPageLocators.RECOVER_BUTTON)
 
-
-class AccountPage(BasePage):
-
     @allure.step('Клик по кнопке "История заказов"')
     def click_history_order(self):
         self.wait_close(HomePageLocators.OVERLAY)
@@ -66,3 +63,4 @@ class AccountPage(BasePage):
         self.write(AccountPageLocators.PASSWORD, password)
         self.click_js(AccountPageLocators.LOGIN_BUTTON)
         self.wait_for_url_to_be(URL.BASE_URL)
+        

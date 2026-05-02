@@ -54,7 +54,7 @@ class HomePage(BasePage):
 
     @allure.step('Получить счетчик ингредиента')
     def click_order_button(self):
-        self.click(HomePageLocators.ORDER_BUTTON)
+        self.click_js(HomePageLocators.ORDER_BUTTON)
     
     @allure.step('Получить номер заказа')
     def check_num_order(self):

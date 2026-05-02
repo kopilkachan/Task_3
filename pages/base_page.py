@@ -77,4 +77,7 @@ class BasePage:
         
     def wait_for_url_to_be(self, expected_url):
         self.wait.until(EC.url_to_be(expected_url))
+
+    def get_current_url(self):
+        return self.driver.current_url
     

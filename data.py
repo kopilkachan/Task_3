@@ -18,3 +18,4 @@ class Answer:
 class LogoPass:
 
     EMAIL = 'example@test.test'
+    

@@ -9,3 +9,4 @@ class FeedPageLocators:
     ALL_ORDERS_SUM = (By.XPATH, ".//p[contains(text(),'Выполнено за все время')]/following-sibling::p[contains(@class,'OrderFeed_number__2MbrQ')]")
     ALL_TODAY_ORDERS_SUM = (By.XPATH, ".//p[contains(text(),'Выполнено за сегодня')]/following-sibling::p[contains(@class,'OrderFeed_number__2MbrQ')]")
     IN_WORK_LIST = (By.XPATH, ".//ul[@class = 'OrderFeed_orderListReady__1YFem OrderFeed_orderList__cBvyi']/li[@class='text text_type_digits-default mb-2'][position() <= 3]")
+    

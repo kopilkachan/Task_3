@@ -14,3 +14,4 @@ class AccountPageLocators:
     EXIT_ACCOUNT = (By.XPATH, ".//button[text()='Выход']")
     LAST_ORDER = (By.XPATH, ".//p[@class='text text_type_digits-default']")
     R2_D3_IN_HISTORY = (By.XPATH, ".//h2[text()='Флюоресцентный бургер']")
+    

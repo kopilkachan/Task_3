@@ -3,6 +3,7 @@ from selenium import webdriver
 from data import URL
 from helpers_api import UserApi, email_pass_name_random
 
+
 @pytest.fixture(params=["chrome", "firefox"], ids=["Chrome", "Firefox"])
 def browser(request):
     if request.param == 'chrome':

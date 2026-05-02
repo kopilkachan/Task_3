@@ -23,3 +23,4 @@ class UserApi:
     @staticmethod
     def delete_user(token):
         return requests.delete(URL.BASE_URL + URL.DELETE_USER, headers={"Authorization": token})
+        
